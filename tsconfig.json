@@ -4,10 +4,13 @@
     "module": "es2015",
     "esModuleInterop": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "noEmit": true,
+    "moduleResolution": "node"
   },
   "include": [
-    "src/**/*.ts"
+    "app/**/*.ts"
   ],
   "exclude": [
     "**/*.test.ts",

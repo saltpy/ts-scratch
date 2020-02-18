@@ -1,0 +1,29 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+span {
+    font-style: italic;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+    border-radius: 20px;
+    max-width: 100%;
+    cursor: none;
+    -ms-touch-action:none;
+}
+
+.container {
+    display: block;
+    margin: auto;
+    max-width: 1066px;
+}
+
+#sound {
+    float: right;
+    padding: 10px;
+}
