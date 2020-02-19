@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: integration
+spec:
+  template:
+    spec:
+      containers:
+      - name: integration
+        image: saltpy/integration:latest
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Never
+  backoffLimit: 4

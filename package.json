@@ -29,7 +29,7 @@
   },
   "scripts": {
     "lint": "npx eslint app/*.ts --fix",
-    "build": "babel --out-file www/assets/bundle.js app/index.ts",
+    "build": "babel --out-file www/assets/app.js app/index.ts",
     "test": "jest",
     "tsc": "tsc"
   }

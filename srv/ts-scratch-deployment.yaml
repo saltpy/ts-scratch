@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ts-scratch
+  labels:
+    app: ts-scratch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ts-scratch
+  template:
+    metadata:
+      labels:
+        app: ts-scratch
+    spec:
+      containers:
+      - name: ts-scratch
+        image: saltpy/ts-scratch:1.0.0
+        ports:
+          - containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /meta/live
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /meta/ready
+            port: 8080
+          initialDelaySeconds: 30
+          timeoutSeconds: 5 
